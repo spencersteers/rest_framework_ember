@@ -26,7 +26,7 @@ def get_resource_name(view):
                 except AttributeError:
                     resource_name = view.__class__.__name__
 
-    if isinstance(resource_name, basestring):
+    if isinstance(resource_name, str):
         return inflection.camelize(resource_name, False)
 
     return resource_name
